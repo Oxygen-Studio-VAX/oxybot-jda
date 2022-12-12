@@ -5,7 +5,7 @@ import com.mongodb.client.MongoClients
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.MongoDatabase
 import org.bson.Document
-import su.gachi.bot.core.Client
+import su.gachi.core.Client
 
 class DatabaseService(discordClient: Client) {
     val client: MongoClient
