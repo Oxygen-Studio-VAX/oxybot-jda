@@ -33,6 +33,7 @@ dependencies {
     implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.json:json:20220924")
     implementation("com.github.walkyst:lavaplayer-fork:1.3.99.1")
+    implementation("org.mongodb:mongodb-driver-sync:4.7.1")
 }
 
 
