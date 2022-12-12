@@ -9,6 +9,7 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 import net.dv8tion.jda.api.utils.MemberCachePolicy
 import net.dv8tion.jda.api.utils.cache.CacheFlag
 import org.slf4j.LoggerFactory
+import su.gachi.services.LocaleService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
@@ -28,6 +29,7 @@ class Client {
         )
     }
     val usersCount = mutableMapOf<Int, Long>()
+    val localeService = LocaleService()
 
     init {
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)
