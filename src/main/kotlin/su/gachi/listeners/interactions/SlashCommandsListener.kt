@@ -6,6 +6,9 @@ import su.gachi.core.Client
 
 class SlashCommandsListener(private val client: Client) : ListenerAdapter() {
     override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
+        if (client.dotenv["DEV"] != null && event.user.id != "431916398361706496")
+            return
+
         client.commandManager.handle(event)
     }
 }
