@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory
 import su.gachi.Config
 import su.gachi.core.commands.CommandManager
 import su.gachi.listeners.client.ReadyListener
+import su.gachi.listeners.interactions.SlashCommandAutocomplete
 import su.gachi.listeners.interactions.SlashCommandsListener
 import su.gachi.services.DatabaseService
 import su.gachi.services.LocaleService
@@ -26,7 +27,7 @@ class Client {
         .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_VOICE_STATES, GatewayIntent.GUILD_MESSAGES)
         .disableCache(CacheFlag.FORUM_TAGS, CacheFlag.SCHEDULED_EVENTS, CacheFlag.ACTIVITY, CacheFlag.STICKER)
         .setStatus(OnlineStatus.DO_NOT_DISTURB)
-        .addEventListeners(ReadyListener(this), SlashCommandsListener(this))
+        .addEventListeners(ReadyListener(this), SlashCommandsListener(this), SlashCommandAutocomplete())
         .setActivity(Activity.playing("loading..."))
         .build()
     val threadpool = Executors.newScheduledThreadPool(100) { r: Runnable? ->

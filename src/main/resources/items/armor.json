@@ -10,9 +10,9 @@
       "ru": "Тяжёлый русский бронежилет. Защищает туловище и ноги"
     },
     "pricing": {
-      "buy": -1,
+      "buy": null,
       "sell": 3200,
-      "trade": -1
+      "trade": null
     },
     "can_found": "elite_crate",
     "image": "https://i.imgur.com/q7AjBE2.png",
