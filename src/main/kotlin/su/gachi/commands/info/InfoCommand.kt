@@ -15,6 +15,7 @@ class InfoCommand : Command() {
         ctx.replyEmbeds(
             EmbedBuilder().setColor(Config.embedColor)
                 .setTitle(ctx.translate("commands.info.title"))
+                .setDescription(ctx.translate("commands.info.description"))
                 .addField(ctx.translate("commands.info.title"), Config.version, true)
                 .setFooter(ctx.translate("commands.info.footer"), "https://www.gachi.su/favicon.ico")
                 .build()
