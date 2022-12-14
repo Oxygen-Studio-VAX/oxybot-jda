@@ -41,7 +41,7 @@ tasks {
     named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
         baseName = "bot"
         classifier = ""
-        version = "1.0.0-SNAPSHOT.3"
+        version = "1.0.0-SNAPSHOT.4"
     }
 }
 
