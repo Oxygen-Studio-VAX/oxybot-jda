@@ -9,11 +9,22 @@
     "description_localized": {
       "ru": "Тяжёлый русский бронежилет. Защищает туловище и ноги"
     },
-    "price": 0,
+    "pricing": {
+      "buy": -1,
+      "sell": 3200,
+      "trade": -1
+    },
     "can_found": "elite_crate",
-    "image": "",
+    "image": "https://i.imgur.com/q7AjBE2.png",
+    "npc": "blaze",
     "parameters": {
-
-    }
+      "durability": "1000",
+      "melee": "+62%",
+      "movement": "-1.3",
+      "ranged": "+90%",
+      "radiation": "+10%",
+      "explosive": "+60%"
+    },
+    "last_update": 1671033837699
   }
 ]
