@@ -56,16 +56,7 @@ class CommandContext(val client: Client, val interactionEvent: SlashCommandInter
     fun translate(phrase: String, replacements: Map<String, Any> = emptyMap()): String {
         val substitutor = StringSubstitutor(replacements, "{", "}")
 
-        var locale = settings.general.locale
-        if (locale == null) {
-            locale = interactionEvent.userLocale.locale
-            locale = if (Config.locales.contains(locale.split("-")[0]))
-                locale.split("-")[0]
-            else
-                Config.defaultLocale
-        }
-
-        return substitutor.replace(client.localeService.translate(phrase, locale))
+        return substitutor.replace(client.localeService.translate(phrase, this.locale))
     }
 
     val author: User
@@ -79,4 +70,17 @@ class CommandContext(val client: Client, val interactionEvent: SlashCommandInter
 
     val channel: MessageChannelUnion
         get() = interactionEvent.channel
+
+    val locale: String
+        get() {
+            var locale = settings.general.locale
+            if (locale == null) {
+                locale = interactionEvent.userLocale.locale
+                locale = if (Config.locales.contains(locale.split("-")[0]))
+                    locale.split("-")[0]
+                else
+                    Config.defaultLocale
+            }
+            return locale
+        }
 }
