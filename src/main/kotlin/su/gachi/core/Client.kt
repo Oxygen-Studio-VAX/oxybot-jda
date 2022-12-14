@@ -9,11 +9,13 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 import net.dv8tion.jda.api.utils.MemberCachePolicy
 import net.dv8tion.jda.api.utils.cache.CacheFlag
 import org.slf4j.LoggerFactory
+import su.gachi.Config
 import su.gachi.core.commands.CommandManager
 import su.gachi.listeners.client.ReadyListener
 import su.gachi.listeners.interactions.SlashCommandsListener
 import su.gachi.services.DatabaseService
 import su.gachi.services.LocaleService
+import java.time.LocalDateTime
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
@@ -40,17 +42,29 @@ class Client {
 
     init {
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)
+        threadpool.scheduleWithFixedDelay({ daycycleCategoryChanger() }, 10, 300, TimeUnit.SECONDS)
 
         RestAction.setDefaultSuccess { LoggerFactory.getLogger("API").debug("Success RestAction") }
         RestAction.setDefaultFailure { err -> LoggerFactory.getLogger("API").error("RestAction error: ${err.message}") }
     }
 
-    fun countUsers() {
+    private fun countUsers() {
         shardManager.shards.forEach { shard ->
             usersCount[shard.shardInfo.shardId] = 0
             shard.guilds.forEach { guild ->
                 usersCount[shard.shardInfo.shardId] = usersCount[shard.shardInfo.shardId]!! + guild.memberCount
             }
         }
+    }
+
+    private fun daycycleCategoryChanger() {
+        val category = shardManager.getCategoryById(Config.daycycleCategory) ?: return
+
+        var emoji = "🌃"
+        if (LocalDateTime.now().hour in 10..18)
+            emoji = "🌄"
+
+        if (!category.name.startsWith(emoji))
+            category.manager.setName("$emoji Добро Пожаловать $emoji")
     }
 }

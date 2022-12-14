@@ -8,4 +8,6 @@ object Config {
 
     val embedColor = 0x0
     val redColor = 0xED4245
+
+    val daycycleCategory = "942417999330152449"
 }
