@@ -1,1 +1,1 @@
-sudo bash gradlew.sh shadowJar
+sudo bash gradlew shadowJar
