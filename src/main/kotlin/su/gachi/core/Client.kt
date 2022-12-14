@@ -9,6 +9,9 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 import net.dv8tion.jda.api.utils.MemberCachePolicy
 import net.dv8tion.jda.api.utils.cache.CacheFlag
 import org.slf4j.LoggerFactory
+import su.gachi.core.commands.CommandManager
+import su.gachi.listeners.client.ReadyListener
+import su.gachi.listeners.interactions.SlashCommandsListener
 import su.gachi.services.LocaleService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -20,6 +23,7 @@ class Client {
         .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_VOICE_STATES, GatewayIntent.GUILD_MESSAGES)
         .disableCache(CacheFlag.FORUM_TAGS, CacheFlag.SCHEDULED_EVENTS, CacheFlag.ACTIVITY, CacheFlag.STICKER)
         .setStatus(OnlineStatus.DO_NOT_DISTURB)
+        .addEventListeners(ReadyListener(this), SlashCommandsListener(this))
         .setActivity(Activity.playing("loading..."))
         .build()
     val threadpool = Executors.newScheduledThreadPool(100) { r: Runnable? ->
@@ -30,6 +34,7 @@ class Client {
     }
     val usersCount = mutableMapOf<Int, Long>()
     val localeService = LocaleService()
+    val commandManager = CommandManager(this)
 
     init {
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)
