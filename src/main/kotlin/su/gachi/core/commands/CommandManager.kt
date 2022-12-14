@@ -4,6 +4,8 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 import net.dv8tion.jda.api.interactions.DiscordLocale
 import net.dv8tion.jda.api.interactions.commands.localization.ResourceBundleLocalizationFunction
 import org.slf4j.LoggerFactory
+import su.gachi.commands.info.InfoCommand
+import su.gachi.commands.utils.PingCommand
 import su.gachi.core.Client
 import su.gachi.core.settings.GuildSettings
 
@@ -15,7 +17,8 @@ class CommandManager(val client: Client) {
 
     init {
         addCommands(
-
+            InfoCommand(),
+            PingCommand()
         )
     }
 
