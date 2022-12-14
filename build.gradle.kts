@@ -17,7 +17,7 @@ repositories {
 }
 
 tasks.jar {
-    manifest.attributes["Main-Class"] = "MainKt"
+    manifest.attributes["Main-Class"] = "su.gachi.MainKt"
     manifest.attributes["Class-Path"] = configurations
         .runtimeClasspath
         .get()
@@ -50,5 +50,5 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("su.gachi.MainKt")
 }
