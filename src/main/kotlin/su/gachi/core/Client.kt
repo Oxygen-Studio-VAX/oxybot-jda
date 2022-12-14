@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory
 import su.gachi.core.commands.CommandManager
 import su.gachi.listeners.client.ReadyListener
 import su.gachi.listeners.interactions.SlashCommandsListener
+import su.gachi.services.DatabaseService
 import su.gachi.services.LocaleService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -35,6 +36,7 @@ class Client {
     val usersCount = mutableMapOf<Int, Long>()
     val localeService = LocaleService()
     val commandManager = CommandManager(this)
+    val databaseService = DatabaseService(this)
 
     init {
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)

@@ -56,7 +56,16 @@ class CommandContext(val client: Client, val interactionEvent: SlashCommandInter
     fun translate(phrase: String, replacements: Map<String, Any> = emptyMap()): String {
         val substitutor = StringSubstitutor(replacements, "{", "}")
 
-        return substitutor.replace(client.localeService.translate(phrase, "ru"))
+        var locale = settings.general.locale
+        if (locale == null) {
+            locale = interactionEvent.userLocale.locale
+            locale = if (Config.locales.contains(locale.split("-")[0]))
+                locale.split("-")[0]
+            else
+                Config.defaultLocale
+        }
+
+        return substitutor.replace(client.localeService.translate(phrase, locale))
     }
 
     val author: User
