@@ -1,0 +1,19 @@
+[
+  {
+    "id": "6b45",
+    "name": "RATNICK",
+    "name_localized": {
+      "ru": "РАТНИК"
+    },
+    "description": "Heavy Russian bulletproof vest. Protects the torso and legs",
+    "description_localized": {
+      "ru": "Тяжёлый русский бронежилет. Защищает туловище и ноги"
+    },
+    "price": 0,
+    "can_found": "elite_crate",
+    "image": "",
+    "parameters": {
+
+    }
+  }
+]
