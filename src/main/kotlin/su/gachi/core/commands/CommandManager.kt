@@ -6,6 +6,7 @@ import net.dv8tion.jda.api.interactions.commands.localization.ResourceBundleLoca
 import org.slf4j.LoggerFactory
 import su.gachi.commands.info.InfoCommand
 import su.gachi.commands.items.ArmorsCommand
+import su.gachi.commands.items.BackpacksCommand
 import su.gachi.commands.utils.PingCommand
 import su.gachi.core.Client
 import su.gachi.core.settings.GuildSettings
@@ -20,7 +21,7 @@ class CommandManager(val client: Client) {
         addCommands(
             InfoCommand(),
             PingCommand(),
-            ArmorsCommand()
+            ArmorsCommand(), BackpacksCommand()
         )
     }
 

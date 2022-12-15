@@ -25,6 +25,7 @@
       "radiation": "+10%",
       "explosive": "+60%"
     },
+    "color": 4013610,
     "last_update": 1671033837699
   },
   {
@@ -53,6 +54,7 @@
       "radiation": null,
       "explosive": null
     },
+    "color": 3223853,
     "last_update": 1671033837699
   },
   {
@@ -81,6 +83,7 @@
       "radiation": null,
       "explosive": null
     },
+    "color": 4408884,
     "last_update": 1671033837699
   },
   {
@@ -109,6 +112,7 @@
       "radiation": null,
       "explosive": null
     },
+    "color": 4605233,
     "last_update": 1671033837699
   },
   {
@@ -137,6 +141,7 @@
       "radiation": null,
       "explosive": null
     },
+    "color": 4473906,
     "last_update": 1671033837699
   },
   {
@@ -165,6 +170,7 @@
       "radiation": null,
       "explosive": null
     },
+    "color": 4473906,
     "last_update": 1671033837699
   }
 ]

@@ -3,12 +3,12 @@ package su.gachi.items
 import org.json.JSONArray
 import org.json.JSONObject
 
-class ArmoryItems {
+class BackpacksItems {
     companion object {
         var raw: JSONArray
 
         init {
-            val str = ArmoryItems::class.java.getResource("/items/armor.json")?.readText(Charsets.UTF_8)
+            val str = ArmoryItems::class.java.getResource("/items/backpacks.json")?.readText(Charsets.UTF_8)
             raw = JSONArray(str)
         }
 
