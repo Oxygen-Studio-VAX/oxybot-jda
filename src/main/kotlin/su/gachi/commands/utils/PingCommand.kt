@@ -7,6 +7,8 @@ class PingCommand : Command() {
     init {
         name = "ping"
         description = "Check bot online"
+
+        isGuildOnly = false
     }
 
     override fun handle(ctx: CommandContext) {
