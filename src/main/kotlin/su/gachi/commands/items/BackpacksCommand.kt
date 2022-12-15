@@ -21,6 +21,8 @@ class BackpacksCommand : Command() {
             OptionData(OptionType.STRING, "id", "Backpack ID (short name)", true, true)
                 .setDescriptionLocalization(DiscordLocale.RUSSIAN, "ID рюкзака (короткое имя)")
         )
+
+        isGuildOnly = false
     }
 
     override fun handle(ctx: CommandContext) {

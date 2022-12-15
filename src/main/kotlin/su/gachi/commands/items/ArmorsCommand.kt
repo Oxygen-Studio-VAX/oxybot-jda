@@ -22,6 +22,8 @@ class ArmorsCommand : Command() {
             OptionData(OptionType.STRING, "id", "Armor ID (short name)", true, true)
                 .setDescriptionLocalization(DiscordLocale.RUSSIAN, "ID бронезащиты (короткое имя)")
         )
+
+        isGuildOnly = false
     }
 
     override fun handle(ctx: CommandContext) {
