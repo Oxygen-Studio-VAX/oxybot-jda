@@ -35,6 +35,7 @@ dependencies {
     implementation("com.github.walkyst:lavaplayer-fork:1.3.99.1")
     implementation("com.github.freyacodes:Lavalink-Client:jda5-SNAPSHOT")
     implementation("org.mongodb:mongodb-driver-sync:4.7.1")
+    implementation("com.github.Black0nion:Pagination-Utils:a482afb83e")
 }
 
 

@@ -1,5 +1,6 @@
 package su.gachi.core
 
+import com.github.ygimenez.model.PaginatorBuilder
 import io.github.cdimascio.dotenv.dotenv
 import lavalink.client.io.jda.JdaLavalink
 import net.dv8tion.jda.api.OnlineStatus
@@ -55,6 +56,11 @@ class Client {
         lavalink.setJdaProvider { id -> shardManager.getShardById(id) }
         lavalink.setUserId(shardManager.retrieveApplicationInfo().complete().id)
         loadLavalinkNodes()
+
+        PaginatorBuilder.createPaginator()
+            .setHandler(this.shardManager)
+            .shouldEventLock(true)
+            .activate()
 
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)
         threadpool.scheduleWithFixedDelay({ daycycleCategoryChanger() }, 10, 300, TimeUnit.SECONDS)

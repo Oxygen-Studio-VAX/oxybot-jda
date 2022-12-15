@@ -8,6 +8,7 @@ import su.gachi.commands.info.InfoCommand
 import su.gachi.commands.items.ArmorsCommand
 import su.gachi.commands.items.BackpacksCommand
 import su.gachi.commands.music.PlayCommand
+import su.gachi.commands.music.QueueCommand
 import su.gachi.commands.music.SkipCommand
 import su.gachi.commands.music.StopCommand
 import su.gachi.commands.utils.PingCommand
@@ -25,7 +26,7 @@ class CommandManager(val client: Client) {
             InfoCommand(),
             PingCommand(),
             ArmorsCommand(), BackpacksCommand(),
-            PlayCommand(), StopCommand(), SkipCommand()
+            PlayCommand(), StopCommand(), SkipCommand(), QueueCommand()
         )
     }
 
