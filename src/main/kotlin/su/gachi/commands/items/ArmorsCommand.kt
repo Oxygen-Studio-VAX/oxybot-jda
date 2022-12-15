@@ -9,6 +9,7 @@ import su.gachi.Config
 import su.gachi.core.commands.Command
 import su.gachi.core.commands.CommandContext
 import su.gachi.items.ArmoryItems
+import su.gachi.items.NpcsData
 import kotlin.text.StringBuilder
 
 
@@ -68,6 +69,16 @@ class ArmorsCommand : Command() {
                 .filter { key -> !item.getJSONObject("parameters").isNull(key) }
             val parameters = mutableMapOf<String, Any>()
             parametersKeys.forEach { key -> parameters[key] = item.getJSONObject("parameters").get(key) }
+
+            if (!item.isNull("npc")) {
+                val npc = NpcsData.npcs[item.getString("npc")]
+                if (npc != null) {
+                    pricing["npc"] = "${npc.getString("emoji")} ${if (npc.getJSONObject("name_localized").has(ctx.locale))
+                        npc.getJSONObject("name_localized").getString(ctx.locale)
+                    else
+                        npc.getString("name")}"
+                }
+            }
 
             ctx.editOriginalEmbeds(
                 EmbedBuilder().setColor(Config.embedColor)

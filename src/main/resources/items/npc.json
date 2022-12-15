@@ -1,0 +1,26 @@
+[
+  {
+    "id": "blaze",
+    "emoji": "<:blaze:948658863530450994>",
+    "name": "Blaze",
+    "name_localized": {
+      "ru": "Блеск"
+    }
+  },
+  {
+    "id": "nurse",
+    "emoji": "<:nurse:948658850020605952>",
+    "name": "Nurse",
+    "name_localized": {
+      "ru": "Медсестра"
+    }
+  },
+  {
+    "id": "mihkel",
+    "emoji": "<:mihkel:948658889480630272>",
+    "name": "Mihkel",
+    "name_localized": {
+      "ru": "Михкел"
+    }
+  }
+]

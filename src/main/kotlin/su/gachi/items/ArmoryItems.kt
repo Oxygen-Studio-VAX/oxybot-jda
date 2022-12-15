@@ -8,7 +8,7 @@ class ArmoryItems {
         var raw: JSONArray
 
         init {
-            val str = ArmoryItems::class.java.getResource("/items/armor.json").readText(Charsets.UTF_8)
+            val str = ArmoryItems::class.java.getResource("/items/armor.json")?.readText(Charsets.UTF_8)
             raw = JSONArray(str)
         }
 
