@@ -86,10 +86,10 @@ class Client {
         val category = shardManager.getCategoryById(Config.daycycleCategory) ?: return
 
         var emoji = "🌃"
-        if (LocalDateTime.now().hour in 10..18)
+        if (LocalDateTime.now().hour in 8..17)
             emoji = "🌄"
 
         if (!category.name.startsWith(emoji))
-            category.manager.setName("$emoji Добро Пожаловать $emoji")
+            category.manager.setName("$emoji Добро Пожаловать $emoji").queue()
     }
 }
