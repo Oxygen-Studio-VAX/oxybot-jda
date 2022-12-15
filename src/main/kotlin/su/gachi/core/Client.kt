@@ -9,6 +9,8 @@ import net.dv8tion.jda.api.requests.RestAction
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder
 import net.dv8tion.jda.api.utils.MemberCachePolicy
 import net.dv8tion.jda.api.utils.cache.CacheFlag
+import org.json.JSONArray
+import org.json.JSONObject
 import org.slf4j.LoggerFactory
 import su.gachi.Config
 import su.gachi.audio.AudioManager
@@ -18,6 +20,7 @@ import su.gachi.listeners.interactions.SlashCommandAutocomplete
 import su.gachi.listeners.interactions.SlashCommandsListener
 import su.gachi.services.DatabaseService
 import su.gachi.services.LocaleService
+import java.net.URI
 import java.time.LocalDateTime
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -47,11 +50,26 @@ class Client {
     val audioManager = AudioManager(this)
 
     init {
+        lavalink.autoReconnect = true
+        lavalink.setJdaProvider { id -> shardManager.getShardById(id) }
+        lavalink.setUserId(shardManager.retrieveApplicationInfo().complete().id)
+        loadLavalinkNodes()
+
         threadpool.scheduleWithFixedDelay({ countUsers() }, 10, 30, TimeUnit.SECONDS)
         threadpool.scheduleWithFixedDelay({ daycycleCategoryChanger() }, 10, 300, TimeUnit.SECONDS)
 
         RestAction.setDefaultSuccess { LoggerFactory.getLogger("API").debug("Success RestAction") }
         RestAction.setDefaultFailure { err -> LoggerFactory.getLogger("API").error("RestAction error: ${err.message}") }
+    }
+
+    fun loadLavalinkNodes() {
+        val str = Client::class.java.getResource("/lavalink-nodes.json")?.readText(Charsets.UTF_8)
+        val nodes = JSONArray(str)
+
+        nodes.forEach {
+            val node = it as JSONObject
+            lavalink.addNode(node.getString("name"), URI(node.getString("uri")), node.getString("password"))
+        }
     }
 
     private fun countUsers() {
