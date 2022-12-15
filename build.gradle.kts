@@ -33,6 +33,7 @@ dependencies {
     implementation("org.apache.commons:commons-text:1.10.0")
     implementation("org.json:json:20220924")
     implementation("com.github.walkyst:lavaplayer-fork:1.3.99.1")
+    implementation("com.github.freyacodes:Lavalink-Client:jda5-SNAPSHOT")
     implementation("org.mongodb:mongodb-driver-sync:4.7.1")
 }
 
@@ -41,7 +42,7 @@ tasks {
     named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
         baseName = "bot"
         classifier = ""
-        version = "1.0.0-SNAPSHOT.5"
+        version = "1.0.0-SNAPSHOT.6"
     }
 }
 
