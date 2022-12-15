@@ -1,0 +1,89 @@
+[
+  {
+    "id": "attak-5",
+    "name": "ATTAK-5",
+    "name_localized": {
+      "ru": "Аттак-5"
+    },
+    "description": "The \"Attak-5\" backpack is used in special forces",
+    "description_localized": {
+      "ru": "Рюкзак \"Аттака-5\" используется в специальных силах"
+    },
+    "rarity": "Below Average",
+    "rarity_localized": {
+      "ru": "Ниже среднего"
+    },
+    "demand": "Above Average",
+    "demand_localized": {
+      "ru": "Выше среднего"
+    },
+    "npc": "blaze",
+    "pricing": {
+      "buy": null,
+      "sell": 4000,
+      "trade": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/pROI3KE.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "lynx",
+    "name": "LYNX",
+    "name_localized": {
+      "ru": "РЫСЬ"
+    },
+    "description": "The \"Lynx\" backpack is used by engineers and doctors. Very ergonomic and without movement restrictions",
+    "description_localized": {
+      "ru": "Рюкзак \"Рысь\" используется инженерами и медиками. Очень эргономичный и без ограничений движения"
+    },
+    "rarity": "N/A",
+    "rarity_localized": {
+      "ru": "Н/Д"
+    },
+    "demand": "N/A",
+    "demand_localized": {
+      "ru": "Н/Д"
+    },
+    "npc": "blaze",
+    "pricing": {
+      "buy": 1400,
+      "sell": 800,
+      "trade": null
+    },
+    "can_found": null,
+    "color": 1412127,
+    "image": "https://i.imgur.com/fog3MHW.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "tortilla",
+    "name": "TORTILLA 45L",
+    "name_localized": {
+      "ru": "ТОРТИЛЬЯ"
+    },
+    "description": "The \"Tortilla\" was used in special forces before being replace with \"Attaka-2\"",
+    "description_localized": {
+      "ru": "Рюкзак \"Тортилья\" использовался в спецназе до того, как была заменена на \"Аттака-2\""
+    },
+    "rarity": "N/A",
+    "rarity_localized": {
+      "ru": "Н/Д"
+    },
+    "demand": "N/A",
+    "demand_localized": {
+      "ru": "Н/Д"
+    },
+    "npc": "blaze",
+    "pricing": {
+      "buy": 5500,
+      "sell": 2200,
+      "trade": null
+    },
+    "can_found": null,
+    "color": 1412127,
+    "image": "https://i.imgur.com/fog3MHW.png",
+    "last_update": 1671033837699
+  }
+]
