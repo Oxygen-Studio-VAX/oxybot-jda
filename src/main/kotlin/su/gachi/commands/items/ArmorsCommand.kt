@@ -81,7 +81,7 @@ class ArmorsCommand : Command() {
             }
 
             ctx.editOriginalEmbeds(
-                EmbedBuilder().setColor(Config.embedColor)
+                EmbedBuilder().setColor(if (item.isNull("color")) Config.embedColor else item.getInt("color"))
                     .setTitle(ctx.translate("commands.armors.info.title", mapOf("name" to itemName)))
                     .setDescription(itemDescription)
                     .setThumbnail(item.getString("image"))
