@@ -1,6 +1,7 @@
 package su.gachi.core.commands
 
 import net.dv8tion.jda.api.EmbedBuilder
+import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.entities.Guild
 import net.dv8tion.jda.api.entities.Member
 import net.dv8tion.jda.api.entities.MessageEmbed
@@ -70,6 +71,9 @@ class CommandContext(val client: Client, val interactionEvent: SlashCommandInter
 
     val channel: MessageChannelUnion
         get() = interactionEvent.channel
+
+    val jda: JDA
+        get() = interactionEvent.jda
 
     val locale: String
         get() {
