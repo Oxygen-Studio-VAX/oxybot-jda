@@ -17,6 +17,7 @@ import su.gachi.Config
 import su.gachi.audio.AudioManager
 import su.gachi.core.commands.CommandManager
 import su.gachi.listeners.client.ReadyListener
+import su.gachi.listeners.guilds.GuildsFlowListener
 import su.gachi.listeners.interactions.NotifySelectListener
 import su.gachi.listeners.interactions.SlashCommandAutocomplete
 import su.gachi.listeners.interactions.SlashCommandsListener
@@ -36,7 +37,7 @@ class Client {
         .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_VOICE_STATES, GatewayIntent.GUILD_MESSAGES)
         .disableCache(CacheFlag.FORUM_TAGS, CacheFlag.SCHEDULED_EVENTS, CacheFlag.ACTIVITY, CacheFlag.STICKER)
         .setStatus(OnlineStatus.DO_NOT_DISTURB)
-        .addEventListeners(ReadyListener(this), MessageCreateListener(), lavalink, NotifySelectListener(), SlashCommandsListener(this), SlashCommandAutocomplete())
+        .addEventListeners(ReadyListener(this), MessageCreateListener(), GuildsFlowListener(this), lavalink, NotifySelectListener(), SlashCommandsListener(this), SlashCommandAutocomplete())
         .setActivity(Activity.playing("loading..."))
         .setVoiceDispatchInterceptor(lavalink.voiceInterceptor)
         .build()
