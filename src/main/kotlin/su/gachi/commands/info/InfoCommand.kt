@@ -27,6 +27,7 @@ class InfoCommand : Command() {
             .setTitle(ctx.translate("commands.info.title"))
             .setDescription(ctx.translate("commands.info.description"))
             .addField(ctx.translate("commands.info.version"), Config.version, true)
+            .addField(ctx.translate("commands.info.links.title"), ctx.translate("commands.info.links.value", mapOf("support" to Config.supportServer)), false)
             .setFooter(ctx.translate("commands.info.footer"), ctx.jda.selfUser.effectiveAvatarUrl)
             .setTimestamp(Instant.now())
 

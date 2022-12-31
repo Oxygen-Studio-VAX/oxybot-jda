@@ -10,4 +10,5 @@ object Config {
     val redColor = 0xED4245
 
     val daycycleCategory = "942417999330152449"
+    val supportServer = "https://discord.gg/5KKr2vxJCs"
 }

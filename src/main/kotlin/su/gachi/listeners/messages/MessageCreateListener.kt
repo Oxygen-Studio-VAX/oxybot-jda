@@ -13,7 +13,7 @@ class MessageCreateListener : ListenerAdapter() {
         if (event.message.contentRaw.startsWith("!show-roles")) {
             event.channel.sendMessageEmbeds(
                 EmbedBuilder()
-                    .setTitle("Выбер оповещений")
+                    .setTitle("Выбор оповещений")
                     .setColor(Config.embedColor)
                     .build()
             ).addActionRow(
