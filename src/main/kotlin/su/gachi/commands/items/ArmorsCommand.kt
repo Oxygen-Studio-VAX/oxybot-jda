@@ -75,10 +75,10 @@ class ArmorsCommand : Command() {
             if (!item.isNull("npc")) {
                 val npc = NpcsData.npcs[item.getString("npc")]
                 if (npc != null) {
-                    pricing["npc"] = "${npc.getString("emoji")} ${if (npc.getJSONObject("name_localized").has(ctx.locale))
+                    pricing["npc"] = "${if (npc.getJSONObject("name_localized").has(ctx.locale))
                         npc.getJSONObject("name_localized").getString(ctx.locale)
                     else
-                        npc.getString("name")}"
+                        npc.getString("name")} ${npc.getString("emoji")}"
                 }
             }
 
