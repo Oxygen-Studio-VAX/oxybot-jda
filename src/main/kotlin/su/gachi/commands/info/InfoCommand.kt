@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.interactions.commands.build.OptionData
 import su.gachi.Config
 import su.gachi.core.commands.Command
 import su.gachi.core.commands.CommandContext
+import java.time.Instant
 
 class InfoCommand : Command() {
     init {
@@ -26,7 +27,8 @@ class InfoCommand : Command() {
             .setTitle(ctx.translate("commands.info.title"))
             .setDescription(ctx.translate("commands.info.description"))
             .addField(ctx.translate("commands.info.version"), Config.version, true)
-            .setFooter(ctx.translate("commands.info.footer"), "https://music.gachi.su/logo.png")
+            .setFooter(ctx.translate("commands.info.footer"), ctx.jda.selfUser.effectiveAvatarUrl)
+            .setTimestamp(Instant.now())
 
         if (ctx.getOption("debug")?.asBoolean == true)
             emb.addField("Debug info", "```\nJV${System.getProperty("java.version")}KT${KotlinVersion.CURRENT}BT${Config.version}US${ctx.author.id}GU${ctx.guild?.id ?: "DM"}T${System.currentTimeMillis()}\n```", false)
