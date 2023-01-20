@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory
 import su.gachi.commands.info.InfoCommand
 import su.gachi.commands.items.ArmorsCommand
 import su.gachi.commands.items.BackpacksCommand
+import su.gachi.commands.items.WeaponsCommand
 import su.gachi.commands.music.PlayCommand
 import su.gachi.commands.music.QueueCommand
 import su.gachi.commands.music.SkipCommand
@@ -25,7 +26,7 @@ class CommandManager(val client: Client) {
         addCommands(
             InfoCommand(),
             PingCommand(),
-            ArmorsCommand(), BackpacksCommand(),
+            ArmorsCommand(), BackpacksCommand(), WeaponsCommand(),
             PlayCommand(), StopCommand(), SkipCommand(), QueueCommand()
         )
     }
