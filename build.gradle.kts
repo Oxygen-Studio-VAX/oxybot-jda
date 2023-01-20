@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "su.gachi"
-version = "1.0.0-SNAPSHOT.1"
+version = "1.0.0-SNAPSHOT.9"
 
 repositories {
     mavenCentral()
@@ -43,7 +43,7 @@ tasks {
     named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
         baseName = "bot"
         classifier = ""
-        version = "1.0.0-SNAPSHOT.8"
+        version = "1.0.0-SNAPSHOT.9"
     }
 }
 

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "svd",
+    "name": "SVD",
+    "name_localized": {
+      "ru": "СВД"
+    },
+    "description": "Soviet weapon",
+    "description_localized": {
+      "ru": "Советское оружие"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": null,
+      "sell": null,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": "7.62x54",
+      "durability": 200,
+      "zoom": 1.4,
+      "damage": 61,
+      "bullet_speed": 885,
+      "firing_rate": 600,
+      "penetration": 33,
+      "vertical_recoil": 137.8,
+      "horizontal_recoil": 153
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/UBJad5R.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "akm",
+    "name": "AKM-1",
+    "name_localized": {
+      "ru": "АКМ-1"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": null,
+      "sell": null,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/mlvOktJ.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "mosin",
+    "name": "Mosin Nagan",
+    "name_localized": {
+      "ru": "Мосин Наган"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": 3900,
+      "sell": 1600,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/UIFp17I.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "mp443",
+    "name": "MP443",
+    "name_localized": {
+      "ru": "МР443"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": null,
+      "sell": null,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/xaSAPJb.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "tfz",
+    "name": "TFZ-0",
+    "name_localized": {
+      "ru": "ТФЗ-0"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": null,
+      "sell": null,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/qClF5ZM.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "ppsh41",
+    "name": "PPSH-41",
+    "name_localized": {
+      "ru": "ППШ-41"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": 3000,
+      "sell": 1200,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/DITwwEF.png",
+    "last_update": 1671033837699
+  },
+  {
+    "id": "makarov",
+    "name": "Makarov",
+    "name_localized": {
+      "ru": "Макаров"
+    },
+    "description": "-",
+    "description_localized": {
+      "ru": "-"
+    },
+    "npc": "mihkel",
+    "pricing": {
+      "buy": null,
+      "sell": null,
+      "trade": null
+    },
+    "parameters": {
+      "ammo_type": null,
+      "durability": null,
+      "zoom": null,
+      "damage": null,
+      "bullet_speed": null,
+      "firing_rate": null,
+      "penetration": null,
+      "vertical_recoil": null,
+      "horizontal_recoil": null
+    },
+    "can_found": "elite_crate",
+    "color": 4670275,
+    "image": "https://i.imgur.com/bfWbszM.png",
+    "last_update": 1671033837699
+  }
+]
